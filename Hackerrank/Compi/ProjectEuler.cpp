@@ -6,6 +6,8 @@
 using namespace std;
 
 int a[100],j[30],fact_f;
+int f_of(int n);
+
 unsigned int factorial(unsigned int n)
 {
     int res = 1, i;
