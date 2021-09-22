@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     int n,i;
-    int a[n];
+    int a[n],b[n];
     cin>>n;
     for(i=0;i<n;i++){
         if(i<n/2){
@@ -26,17 +26,17 @@ int main() {
 
     for(i=0;i<n;i++){
           if(i>=n/2)
-          a[i]=a[i]%10;
+          b[i]=a[i]%10;
           else{
 
         digits = (int)log10(a[i]);
-        a[i] = (int)(a[i]/ pow(10, digits));
+        b[i] = (int)(a[i]/ pow(10, digits));
           }
     
 
     }
     for(int i=n;i<n;i--){
-       number=10*number+a[i];
+       number=10*number+b[i];
     }
 
     if(number%11==0)
