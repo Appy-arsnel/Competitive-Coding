@@ -1,6 +1,6 @@
 
 
-#include <iostream>
+#include <stdio.h>
 #include <math.h>
 
 
@@ -8,16 +8,17 @@ using namespace std;
 
 int main() {
     int n,i;
-    int a[n],b[n];
-    cin>>n;
+   scanf("%d",&n);
+        int a[n];
+    
+
     for(i=0;i<n;i++){
         if(i<n/2){
-        cin>>a[i];
-       
-
+               scanf("%d",&a[i]);
         }
         else{
-            cin>>a[i];
+               scanf("%d",&a[i]);
+
         }
        
     }
@@ -25,24 +26,27 @@ int main() {
         int digits;
 
     for(i=0;i<n;i++){
-          if(i>=n/2)
-          b[i]=a[i]%10;
+          if(i<n/2){
+          digits = (int)log10(a[i]);
+       a[i] = (int)(a[i]/ pow(10, digits));
+          }
           else{
+           a[i]=a[i]%10;
 
-        digits = (int)log10(a[i]);
-        b[i] = (int)(a[i]/ pow(10, digits));
           }
     
 
     }
-    for(int i=n;i<n;i--){
-       number=10*number+b[i];
+    for(int i=n-1;i>=0;i--){
+  
+
+       number=10*number+a[i];
     }
 
-    if(number%11==0)
-       cout<<"OUI";
+    if(number!=0&&number%11==0)
+       printf("OUI");
     else
-       cout<<"NON";
+       printf("NON");
     return 0;							
 }
 
