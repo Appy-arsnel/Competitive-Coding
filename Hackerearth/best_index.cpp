@@ -6,12 +6,13 @@ using namespace std;
 
 int main() {
 	int n,splsum=0;
-//	cin >> n;
-n=6;
-     int a[n]={-3, 2, 3, -4, 3, 1};
-    /* for(int i=0;i<n;i++){
+
+	cin >> n;
+
+     int a[n];
+   for(int i=0;i<n;i++){
          cin>>a[i];
-     }*/
+     
      for(int i=0;i<n;i++){
          int sum=0,k=1,index;
            index=i;
@@ -29,6 +30,22 @@ n=6;
          }
          if(splsum<sum){
              
+
+	cin >> n;	
+     int a[n];
+     for(int i=0;i<n;i++){
+         cin>>a[i];
+     }
+     for(int i=0;i<n;i++){
+         int sum=0,k=1;
+         
+           for(int d=i;d<k&&i<n;k++){
+             sum=a[i];
+             i++;
+
+         }
+         if(splsum<sum){
+
              splsum=sum;
          }
      }
