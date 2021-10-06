@@ -5,19 +5,15 @@ using namespace std;
 
 int main()
 {
-   int n,k,j=0;
-   
-      cin>>n>>k;
-      
-        int a[n];
-
-
-
-
- for(int i=0;i<n;i++){
  
-       
-       cin>>a[i];
+        int a[5][5];
+
+
+
+
+ for(int i=0;i<5;i++){
+  for(int j=0;i<5;i++)
+       cin>>a[i][j];
  
    
  }
