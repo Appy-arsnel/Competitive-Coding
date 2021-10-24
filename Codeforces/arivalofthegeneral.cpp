@@ -1,4 +1,4 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -8,22 +8,16 @@ int main(){
     for(int i=0;i<n;i++)
         cin>>a[n];
     
-    int max=0,mini,min=0,maxi;
 
-    for(int i=0;i<n;i++)
-    {
-        if(a[i]>max){
-            max=a[i];
-            maxi=i;
-            
-        }
-        if(a[i]<min){
-            min=a[i];
-            mini=i;
-        }
-    }
-    
-   ans +=maxi;
+    int mini= distance(a,min_element(a,a+n));
+    int maxi= distance(a,max_element(a,a+n));
+
+         cout<<maxi<<"\n\n"; 
+
+        mini= n-(mini+1);
+        cout<<mini<<"\n\n";
+        
+   ans =ans+maxi;
    ans =ans+(n-(1+mini));
    cout<<ans;
 
